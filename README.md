@@ -1,51 +1,43 @@
-# Sistema Web Configurable para la Gestión Académica
+Sistema Web Configurable para la Gestión Académica
+Descripción
+Proyecto formativo desarrollado en el programa Tecnología en Análisis y Desarrollo de Software (ADSO) del SENA, orientado a la gestión académica de una institución educativa.
 
-2
+Tecnologías Utilizadas
+Node.js
+Express.js
+PostgreSQL
+Git
+GitHub
+Visual Studio Code
+Arquitectura Implementada
+El backend fue desarrollado utilizando una arquitectura por capas:
 
- 
-3
+Routes
+Controllers
+Services
+Repositories
+PostgreSQL
+Módulo Desarrollado
+Gestión de Estudiantes
+Funcionalidades implementadas:
 
-## Proyecto ADSO SENA
+Crear estudiante (POST)
+Consultar estudiantes (GET)
+Actualizar estudiante (PUT)
+Eliminar estudiante (DELETE)
+Persistencia de Datos
+La información se almacena en PostgreSQL mediante consultas SQL y acceso a datos a través de la capa Repository.
 
-4
+Control de Versiones
+El proyecto utiliza Git y GitHub para el seguimiento y control de cambios.
 
- 
-5
-Aplicación web destinada a gestionar los procesos académicos de una institución educativa mediante una plataforma configurable.
-6
+Repositorio
+https://github.com/fredy2013/sistema-web-gestion-academica
 
- 
-7
+Estado Actual
+CRUD completo del módulo Estudiantes implementado y funcional.
 
-## Tecnologías
+Autor
 
-8
-
- 
-9
-
-- HTML5
-  10
-- CSS3
-  11
-- JavaScript
-  12
-- Node.js
-  13
-- PostgreSQL
-  14
-- Git
-  15
-- GitHub
-  16
-
- 
-17
-
-## Autor
-
-18
-
- 
-19
-Fredy de Jesús Morales Morales
+Fredy De Jesus Morales Morales
+Aprendiz - SENA Tecnologia de Analisis y Desarrollo de Software

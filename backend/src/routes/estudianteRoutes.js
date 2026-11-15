@@ -14,4 +14,15 @@ router.post(
     "/",
     estudianteController.crearEstudiante
 );
+
+router.put(
+    "/:id",
+    estudianteController.actualizarEstudiante
+);
+
+router.delete(
+    "/:id",
+    estudianteController.eliminarEstudiante
+);
+
 module.exports = router;
