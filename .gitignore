@@ -1,4 +1,10 @@
+# Dependencias
 node_modules/
-.env
+
+# Variables de entorno y credenciales
+.env*
+!.env.example
+
+# Archivos generados
 dist/
 build/
