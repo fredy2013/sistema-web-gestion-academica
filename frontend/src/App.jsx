@@ -1,8 +1,8 @@
 import './App.css';
-import Login from './modules/auth/Login';
+import Dashboard from './modules/dashboard/Dashboard';
 
 function App() {
-  return <Login />;
+  return <Dashboard />;
 }
 
 export default App;
