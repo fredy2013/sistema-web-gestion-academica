@@ -1,8 +1,8 @@
 import './App.css';
-import Users from './modules/users/Users';
+import People from './modules/people/People';
 
 function App() {
-  return <Users />;
+  return <People />;
 }
 
 export default App;

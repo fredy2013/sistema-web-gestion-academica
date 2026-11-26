@@ -1,0 +1,591 @@
+/* =========================================
+   MÓDULO UI-04: PERSONAS Y PERFILES
+========================================= */
+
+.people-page {
+  min-height: 100vh;
+  padding: 36px;
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+.people-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 26px;
+}
+
+.people-breadcrumb {
+  color: #2563eb;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.people-header h1 {
+  margin: 9px 0;
+  color: #0f172a;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.people-header p {
+  max-width: 650px;
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* =========================================
+   BOTÓN PRINCIPAL
+========================================= */
+
+.people-primary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 10px 17px;
+  color: #ffffff;
+  background: #2563eb;
+  border: 1px solid #2563eb;
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.people-primary-button:hover {
+  background: #1d4ed8;
+}
+
+/* =========================================
+   AVISO DE DEMOSTRACIÓN
+========================================= */
+
+.people-demo-notice {
+  margin-bottom: 24px;
+  padding: 14px 17px;
+  color: #854d0e;
+  background: #fefce8;
+  border: 1px solid #fde68a;
+  border-radius: 8px;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* =========================================
+   INDICADORES GENERALES
+========================================= */
+
+.people-statistics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.people-stat-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 23px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 11px;
+  box-shadow: 0 3px 12px rgb(15 23 42 / 3%);
+}
+
+.people-stat-card span {
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.people-stat-card strong {
+  color: #1e40af;
+  font-size: 29px;
+}
+
+/* =========================================
+   SECCIÓN DEL LISTADO
+========================================= */
+
+.people-table-section {
+  overflow: hidden;
+  padding: 25px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 11px;
+  box-shadow: 0 3px 12px rgb(15 23 42 / 3%);
+}
+
+.people-section-heading h2 {
+  margin: 0;
+  color: #1e293b;
+  font-size: 16px;
+}
+
+.people-section-heading p {
+  margin: 8px 0 0;
+  color: #64748b;
+  font-size: 12px;
+}
+
+/* =========================================
+   BÚSQUEDA
+========================================= */
+
+.people-toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 460px;
+  margin: 24px 0 20px;
+}
+
+.people-toolbar label {
+  color: #334155;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.people-toolbar input {
+  width: 100%;
+  min-height: 42px;
+  padding: 10px 13px;
+  color: #334155;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  font-size: 12px;
+}
+
+.people-toolbar input:focus,
+.people-form-grid input:focus,
+.people-form-grid select:focus,
+.people-profile-select select:focus,
+.people-person-status-select select:focus {
+  outline: 2px solid #bfdbfe;
+  border-color: #3b82f6;
+}
+
+/* =========================================
+   TABLA DE PERSONAS
+========================================= */
+
+.people-table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.people-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.people-table thead {
+  background: #f1f5f9;
+}
+
+.people-table th {
+  padding: 14px 12px;
+  color: #475569;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.people-table td {
+  padding: 15px 12px;
+  color: #475569;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 11px;
+}
+
+.people-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.people-document-cell {
+  white-space: nowrap;
+}
+
+.people-document-cell strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #1e40af;
+  font-size: 11px;
+}
+
+.people-document-cell span {
+  color: #64748b;
+  font-size: 11px;
+}
+
+/* =========================================
+   ETIQUETAS DE PERFIL Y ESTADO
+========================================= */
+
+.people-profile-tag {
+  display: inline-block;
+  padding: 6px 9px;
+  color: #1d4ed8;
+  background: #eff6ff;
+  border-radius: 5px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.people-status {
+  display: inline-block;
+  padding: 6px 9px;
+  border-radius: 5px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.people-status-active {
+  color: #15803d;
+  background: #dcfce7;
+}
+
+.people-status-inactive {
+  color: #b91c1c;
+  background: #fee2e2;
+}
+
+/* =========================================
+   ACCIONES DE PERSONAS
+========================================= */
+
+.people-actions {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  white-space: nowrap;
+}
+
+.people-edit-button,
+.people-status-button {
+  padding: 7px 9px;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 5px;
+  font-size: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.people-edit-button {
+  color: #1d4ed8;
+}
+
+.people-status-button {
+  color: #475569;
+}
+
+.people-edit-button:hover,
+.people-status-button:hover {
+  background: #eff6ff;
+  border-color: #93c5fd;
+}
+
+/* =========================================
+   ESTADO VACÍO
+========================================= */
+
+.people-empty-state {
+  padding: 35px !important;
+  color: #94a3b8 !important;
+  text-align: center;
+}
+
+/* =========================================
+   PAGINACIÓN
+========================================= */
+
+.people-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding-top: 20px;
+  color: #64748b;
+  font-size: 11px;
+}
+
+.people-pagination-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.people-pagination-controls button {
+  padding: 8px 11px;
+  color: #334155;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 5px;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.people-pagination-controls button:disabled {
+  color: #94a3b8;
+  background: #f1f5f9;
+  cursor: not-allowed;
+}
+
+/* =========================================
+   VENTANA MODAL
+========================================= */
+
+.people-modal-overlay {
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  padding: 24px;
+  background: rgb(15 23 42 / 55%);
+}
+
+.people-modal {
+  width: 100%;
+  max-width: 760px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 27px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 15px 45px rgb(15 23 42 / 20%);
+}
+
+/* =========================================
+   ENCABEZADO DEL MODAL
+========================================= */
+
+.people-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 24px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.people-modal-header span {
+  color: #2563eb;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.people-modal-header h2 {
+  margin: 8px 0 0;
+  color: #0f172a;
+  font-size: 19px;
+}
+
+.people-close-button {
+  width: 32px;
+  height: 32px;
+  color: #64748b;
+  background: #f1f5f9;
+  border: 0;
+  border-radius: 6px;
+  font-size: 21px;
+  cursor: pointer;
+}
+
+.people-close-button:hover {
+  color: #0f172a;
+  background: #e2e8f0;
+}
+
+/* =========================================
+   SECCIONES DEL FORMULARIO
+========================================= */
+
+.people-form-section {
+  margin-bottom: 25px;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+}
+
+.people-form-section h3 {
+  margin: 0 0 19px;
+  color: #1e293b;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.people-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 19px;
+}
+
+.people-form-grid label,
+.people-profile-select,
+.people-person-status-select {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #334155;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.people-form-grid input,
+.people-form-grid select,
+.people-profile-select select,
+.people-person-status-select select {
+  width: 100%;
+  min-height: 41px;
+  padding: 10px;
+  color: #334155;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 11px;
+}
+
+/* =========================================
+   PERFIL ACADÉMICO
+========================================= */
+
+.people-profile-select {
+  max-width: 350px;
+}
+
+.people-profile-fields {
+  margin-top: 20px;
+  padding: 17px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 7px;
+}
+
+.people-profile-description {
+  margin-bottom: 18px;
+  color: #64748b;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.people-person-status-select {
+  max-width: 350px;
+}
+
+/* =========================================
+   BOTONES DEL FORMULARIO
+========================================= */
+
+.people-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.people-cancel-button {
+  min-height: 42px;
+  padding: 10px 17px;
+  color: #475569;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.people-cancel-button:hover {
+  background: #f1f5f9;
+}
+
+/* =========================================
+   ADAPTACIÓN A TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+  .people-page {
+    padding: 26px;
+  }
+
+  .people-statistics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .people-stat-card {
+    padding: 18px;
+  }
+}
+
+/* =========================================
+   ADAPTACIÓN A MÓVILES
+========================================= */
+
+@media (max-width: 680px) {
+  .people-page {
+    padding: 20px 15px;
+  }
+
+  .people-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .people-statistics {
+    grid-template-columns: 1fr;
+  }
+
+  .people-table-section {
+    padding: 16px;
+  }
+
+  .people-pagination {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .people-pagination-controls {
+    flex-wrap: wrap;
+  }
+
+  .people-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .people-modal {
+    padding: 19px;
+  }
+
+  .people-modal-overlay {
+    align-items: flex-start;
+    padding: 12px;
+  }
+
+  .people-form-section {
+    padding: 15px;
+  }
+}
