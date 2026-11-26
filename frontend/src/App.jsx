@@ -1,8 +1,8 @@
 import './App.css';
-import People from './modules/people/People';
+import Institution from './modules/institution/Institution';
 
 function App() {
-  return <People />;
+  return <Institution />;
 }
 
 export default App;

@@ -1,0 +1,439 @@
+/* =========================================
+   MÓDULO UI-05: CONFIGURACIÓN INSTITUCIONAL
+========================================= */
+
+.institution-page {
+  min-height: 100vh;
+  padding: 36px;
+  color: #0f172a;
+  background: #f8fafc;
+}
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+.institution-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 26px;
+}
+
+.institution-breadcrumb {
+  color: #2563eb;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.institution-header h1 {
+  margin: 9px 0;
+  color: #0f172a;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.institution-header p {
+  max-width: 680px;
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* =========================================
+   AVISO DE DEMOSTRACIÓN
+========================================= */
+
+.institution-demo-notice {
+  margin-bottom: 24px;
+  padding: 14px 17px;
+  color: #854d0e;
+  background: #fefce8;
+  border: 1px solid #fde68a;
+  border-radius: 8px;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* =========================================
+   MENSAJE DE CONFIRMACIÓN
+========================================= */
+
+.institution-success-message {
+  margin-bottom: 22px;
+  padding: 14px 17px;
+  color: #166534;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* =========================================
+   FORMULARIO PRINCIPAL
+========================================= */
+
+.institution-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* =========================================
+   SECCIONES DE CONFIGURACIÓN
+========================================= */
+
+.institution-section {
+  padding: 25px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 11px;
+  box-shadow: 0 3px 12px rgb(15 23 42 / 3%);
+}
+
+.institution-section-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 25px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.institution-section-header > div {
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  column-gap: 12px;
+  align-items: center;
+}
+
+.institution-section-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  color: #1d4ed8;
+  background: #eff6ff;
+  border-radius: 7px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.institution-section-header h2 {
+  margin: 0;
+  color: #1e293b;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.institution-section-header p {
+  grid-column: 2;
+  margin: 6px 0 0;
+  color: #64748b;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+/* =========================================
+   CAMPOS DEL FORMULARIO
+========================================= */
+
+.institution-fields-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.institution-field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  color: #334155;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.institution-field-full {
+  grid-column: 1 / -1;
+}
+
+.institution-field input,
+.institution-field select {
+  width: 100%;
+  min-height: 42px;
+  padding: 10px 12px;
+  color: #334155;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  font-family: inherit;
+  font-size: 12px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.institution-field input:focus,
+.institution-field select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgb(59 130 246 / 12%);
+}
+
+.institution-field input::placeholder {
+  color: #94a3b8;
+}
+
+.institution-field-help {
+  color: #64748b;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* =========================================
+   ESCALA DE CALIFICACIÓN
+========================================= */
+
+.institution-grades-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.institution-scale-preview {
+  margin-top: 24px;
+  padding: 20px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+}
+
+.institution-scale-preview span {
+  display: block;
+  margin-bottom: 9px;
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.institution-scale-preview strong {
+  display: block;
+  color: #1d4ed8;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.institution-scale-preview p {
+  margin: 8px 0 0;
+  color: #475569;
+  font-size: 11px;
+}
+
+/* =========================================
+   AVISO SOBRE POLÍTICA ACADÉMICA
+========================================= */
+
+.institution-policy-notice {
+  margin-top: 23px;
+  padding: 15px 17px;
+  color: #475569;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 7px;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+/* =========================================
+   BOTONES DEL FORMULARIO
+========================================= */
+
+.institution-form-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 20px 0;
+}
+
+.institution-primary-button,
+.institution-secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 10px 17px;
+  border-radius: 7px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.institution-primary-button {
+  color: #ffffff;
+  background: #2563eb;
+  border: 1px solid #2563eb;
+}
+
+.institution-primary-button:hover {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+}
+
+.institution-secondary-button {
+  color: #475569;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+}
+
+.institution-secondary-button:hover {
+  background: #f1f5f9;
+}
+
+/* =========================================
+   HISTORIAL DE MODIFICACIONES
+========================================= */
+
+.institution-history-section {
+  margin-top: 12px;
+  padding: 25px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 11px;
+  box-shadow: 0 3px 12px rgb(15 23 42 / 3%);
+}
+
+.institution-history-section h2 {
+  margin: 0;
+  color: #1e293b;
+  font-size: 16px;
+}
+
+.institution-history-section > div:first-child p {
+  margin: 8px 0 20px;
+  color: #64748b;
+  font-size: 11px;
+}
+
+.institution-history-empty {
+  padding: 28px;
+  color: #94a3b8;
+  background: #f8fafc;
+  border: 1px dashed #cbd5e1;
+  border-radius: 7px;
+  font-size: 11px;
+  text-align: center;
+}
+
+.institution-history-table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.institution-history-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.institution-history-table thead {
+  background: #f1f5f9;
+}
+
+.institution-history-table th,
+.institution-history-table td {
+  padding: 14px 12px;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 11px;
+}
+
+.institution-history-table th {
+  color: #475569;
+  font-weight: 700;
+}
+
+.institution-history-table td {
+  color: #64748b;
+}
+
+/* =========================================
+   ADAPTACIÓN A TABLET
+========================================= */
+
+@media (max-width: 900px) {
+  .institution-page {
+    padding: 26px;
+  }
+
+  .institution-section {
+    padding: 21px;
+  }
+
+  .institution-grades-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* =========================================
+   ADAPTACIÓN A MÓVILES
+========================================= */
+
+@media (max-width: 620px) {
+  .institution-page {
+    padding: 20px 15px;
+  }
+
+  .institution-header h1 {
+    font-size: 21px;
+  }
+
+  .institution-section {
+    padding: 17px;
+  }
+
+  .institution-section-header > div {
+    grid-template-columns: 30px 1fr;
+    column-gap: 9px;
+  }
+
+  .institution-section-number {
+    width: 29px;
+    height: 29px;
+  }
+
+  .institution-section-header h2 {
+    font-size: 14px;
+  }
+
+  .institution-fields-grid,
+  .institution-grades-grid {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+
+  .institution-field-full {
+    grid-column: auto;
+  }
+
+  .institution-form-actions {
+    align-items: stretch;
+    flex-direction: column-reverse;
+  }
+
+  .institution-primary-button,
+  .institution-secondary-button {
+    width: 100%;
+  }
+
+  .institution-history-section {
+    padding: 18px;
+  }
+}
