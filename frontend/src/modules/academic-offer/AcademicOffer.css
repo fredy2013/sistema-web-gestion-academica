@@ -1,0 +1,658 @@
+/* =========================================
+   MÓDULO UI-06: PERÍODOS Y ASIGNATURAS
+========================================= */
+
+.academic-offer-page {
+  min-height: 100vh;
+  padding: 36px;
+  color: #0f172a;
+  background: #f8fafc;
+}
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+.academic-offer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 25px;
+}
+
+.academic-offer-breadcrumb {
+  color: #2563eb;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.academic-offer-header h1 {
+  margin: 9px 0;
+  color: #0f172a;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.academic-offer-header p {
+  max-width: 680px;
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* =========================================
+   AVISO DE DEMOSTRACIÓN
+========================================= */
+
+.academic-offer-demo-notice {
+  margin-bottom: 23px;
+  padding: 14px 17px;
+  color: #854d0e;
+  background: #fefce8;
+  border: 1px solid #fde68a;
+  border-radius: 8px;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* =========================================
+   MENSAJE DE CONFIRMACIÓN
+========================================= */
+
+.academic-offer-success-message {
+  margin-bottom: 22px;
+  padding: 14px 17px;
+  color: #166534;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* =========================================
+   INDICADORES GENERALES
+========================================= */
+
+.academic-offer-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 25px;
+}
+
+.academic-offer-stat-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 100px;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px rgb(15 23 42 / 3%);
+}
+
+.academic-offer-stat-card span {
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.academic-offer-stat-card strong {
+  color: #1e293b;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+/* =========================================
+   PESTAÑAS DE NAVEGACIÓN
+========================================= */
+
+.academic-offer-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  padding: 6px;
+  background: #eaf0f7;
+  border-radius: 9px;
+}
+
+.academic-offer-tabs button {
+  min-height: 40px;
+  padding: 10px 19px;
+  color: #64748b;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.academic-offer-tabs button:hover {
+  color: #1e40af;
+}
+
+.academic-offer-tabs button.active {
+  color: #1d4ed8;
+  background: #ffffff;
+  border-color: #dbeafe;
+  box-shadow: 0 2px 5px rgb(15 23 42 / 5%);
+}
+
+/* =========================================
+   SECCIONES PRINCIPALES
+========================================= */
+
+.academic-offer-section {
+  padding: 25px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 11px;
+  box-shadow: 0 3px 12px rgb(15 23 42 / 3%);
+}
+
+.academic-offer-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.academic-offer-section-header h2 {
+  margin: 0;
+  color: #1e293b;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.academic-offer-section-header p {
+  margin: 8px 0 0;
+  color: #64748b;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+/* =========================================
+   BOTÓN PRINCIPAL
+========================================= */
+
+.academic-offer-primary-button,
+.academic-offer-secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 10px 16px;
+  border-radius: 7px;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.academic-offer-primary-button {
+  color: #ffffff;
+  background: #2563eb;
+  border: 1px solid #2563eb;
+}
+
+.academic-offer-primary-button:hover {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+}
+
+.academic-offer-secondary-button {
+  color: #475569;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+}
+
+.academic-offer-secondary-button:hover {
+  background: #f1f5f9;
+}
+
+/* =========================================
+   FORMULARIOS
+========================================= */
+
+.academic-offer-form {
+  margin-bottom: 25px;
+  padding: 23px;
+  background: #f8fafc;
+  border: 1px solid #dbeafe;
+  border-radius: 9px;
+}
+
+.academic-offer-form h3 {
+  margin: 0 0 23px;
+  color: #1e293b;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.academic-offer-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.academic-offer-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #334155;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.academic-offer-field-full {
+  grid-column: 1 / -1;
+}
+
+.academic-offer-field input,
+.academic-offer-field select,
+.academic-offer-field textarea {
+  width: 100%;
+  min-height: 41px;
+  padding: 10px 12px;
+  color: #334155;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  font-family: inherit;
+  font-size: 12px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.academic-offer-field textarea {
+  min-height: 85px;
+  resize: vertical;
+}
+
+.academic-offer-field input:focus,
+.academic-offer-field select:focus,
+.academic-offer-field textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgb(59 130 246 / 12%);
+}
+
+.academic-offer-field input::placeholder,
+.academic-offer-field textarea::placeholder {
+  color: #94a3b8;
+}
+
+/* =========================================
+   ACCIONES DE LOS FORMULARIOS
+========================================= */
+
+.academic-offer-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 11px;
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid #e2e8f0;
+}
+
+/* =========================================
+   BUSCADOR Y CONTADOR
+========================================= */
+
+.academic-offer-search-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 19px;
+}
+
+.academic-offer-search-row input {
+  width: min(450px, 100%);
+  min-height: 39px;
+  padding: 9px 12px;
+  color: #334155;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  font-family: inherit;
+  font-size: 11px;
+}
+
+.academic-offer-search-row input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgb(59 130 246 / 10%);
+}
+
+.academic-offer-search-row span {
+  color: #64748b;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+/* =========================================
+   TABLAS
+========================================= */
+
+.academic-offer-table-container {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+}
+
+.academic-offer-table {
+  width: 100%;
+  min-width: 850px;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.academic-offer-table thead {
+  background: #f1f5f9;
+}
+
+.academic-offer-table th,
+.academic-offer-table td {
+  padding: 14px 12px;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 10px;
+  vertical-align: middle;
+}
+
+.academic-offer-table th {
+  color: #475569;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.academic-offer-table td {
+  color: #64748b;
+  line-height: 1.5;
+}
+
+.academic-offer-table td strong {
+  color: #334155;
+  font-weight: 700;
+}
+
+.academic-offer-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.academic-offer-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.academic-offer-empty {
+  padding: 35px 15px !important;
+  color: #94a3b8 !important;
+  text-align: center;
+}
+
+/* =========================================
+   ESTADOS DE REGISTROS
+========================================= */
+
+.academic-offer-status {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 9px;
+  border-radius: 20px;
+  font-size: 9px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.academic-offer-status.activo {
+  color: #166534;
+  background: #dcfce7;
+}
+
+.academic-offer-status.borrador {
+  color: #854d0e;
+  background: #fef3c7;
+}
+
+.academic-offer-status.cerrado {
+  color: #475569;
+  background: #e2e8f0;
+}
+
+.academic-offer-status.inactivo {
+  color: #991b1b;
+  background: #fee2e2;
+}
+
+/* =========================================
+   ACCIONES DE LAS FILAS
+========================================= */
+
+.academic-offer-row-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.academic-offer-row-actions button {
+  padding: 7px 9px;
+  color: #2563eb;
+  background: #eff6ff;
+  border: 1px solid #dbeafe;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.academic-offer-row-actions button:hover {
+  background: #dbeafe;
+}
+
+.academic-offer-row-actions select {
+  max-width: 112px;
+  min-height: 30px;
+  padding: 5px 7px;
+  color: #475569;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 9px;
+}
+
+/* =========================================
+   SEPARADOR DE FECHAS
+========================================= */
+
+.academic-offer-date-separator {
+  color: #94a3b8;
+}
+
+/* =========================================
+   PAGINACIÓN
+========================================= */
+
+.academic-offer-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.academic-offer-pagination span {
+  color: #64748b;
+  font-size: 10px;
+}
+
+.academic-offer-pagination > div {
+  display: flex;
+  gap: 8px;
+}
+
+.academic-offer-pagination button {
+  min-width: 85px;
+  min-height: 34px;
+  padding: 8px 12px;
+  color: #475569;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.academic-offer-pagination button:hover:not(:disabled) {
+  color: #1d4ed8;
+  background: #eff6ff;
+  border-color: #93c5fd;
+}
+
+.academic-offer-pagination button:disabled {
+  color: #cbd5e1;
+  background: #f8fafc;
+  cursor: not-allowed;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+  .academic-offer-page {
+    padding: 27px;
+  }
+
+  .academic-offer-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .academic-offer-section {
+    padding: 21px;
+  }
+}
+
+/* =========================================
+   MÓVILES
+========================================= */
+
+@media (max-width: 620px) {
+  .academic-offer-page {
+    padding: 20px 14px;
+  }
+
+  .academic-offer-header h1 {
+    font-size: 21px;
+  }
+
+  .academic-offer-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .academic-offer-stat-card {
+    min-height: 85px;
+    padding: 14px;
+  }
+
+  .academic-offer-stat-card strong {
+    font-size: 22px;
+  }
+
+  .academic-offer-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .academic-offer-tabs button {
+    padding: 9px 7px;
+    font-size: 10px;
+  }
+
+  .academic-offer-section {
+    padding: 16px;
+  }
+
+  .academic-offer-section-header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .academic-offer-section-header h2 {
+    font-size: 14px;
+  }
+
+  .academic-offer-section-header .academic-offer-primary-button {
+    width: 100%;
+  }
+
+  .academic-offer-form {
+    padding: 16px;
+  }
+
+  .academic-offer-form-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .academic-offer-field-full {
+    grid-column: auto;
+  }
+
+  .academic-offer-form-actions {
+    align-items: stretch;
+    flex-direction: column-reverse;
+  }
+
+  .academic-offer-form-actions button {
+    width: 100%;
+  }
+
+  .academic-offer-search-row {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .academic-offer-search-row input {
+    width: 100%;
+  }
+
+  .academic-offer-search-row span {
+    white-space: normal;
+  }
+
+  .academic-offer-pagination {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .academic-offer-pagination > div {
+    width: 100%;
+  }
+
+  .academic-offer-pagination button {
+    flex: 1;
+  }
+}

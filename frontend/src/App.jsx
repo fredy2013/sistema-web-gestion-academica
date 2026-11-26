@@ -1,8 +1,8 @@
 import './App.css';
-import Institution from './modules/institution/Institution';
+import AcademicOffer from './modules/academic-offer/AcademicOffer';
 
 function App() {
-  return <Institution />;
+  return <AcademicOffer />;
 }
 
 export default App;
